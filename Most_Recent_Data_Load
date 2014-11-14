@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Graph author="michaelphillips" created="Wed Nov 05 16:58:17 PST 2014" guiVersion="3.4.4.P" id="1415313147736" licenseCode="CLP1DGOODD71636137BY" licenseType="Commercial" modified="Thu Nov 06 15:27:48 PST 2014" modifiedBy="michaelphillips" name="LoadDate" revision="1.10" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata0" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="recordName1" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\n" type="delimited">
+<Field format="yyyy-MM-dd HH:mm:ss" name="DateOfLoad" type="date"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata1">
+<Record fieldDelimiter="|" name="recordName2" recordDelimiter="\n" type="delimited">
+<Field name="TimeStamp" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata2">
+<Record fieldDelimiter="|" name="recordName3" recordDelimiter="\n" type="delimited">
+<Field name="LoadTime" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="197" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="12" title="Load Date" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="14" width="936" x="17" y="48"/>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" guiName="Date to String Reformat" guiX="406" guiY="117" id="DATE_TO_STRING_REFORMAT" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+
+function integer transform() {
+	$out.0.LoadTime = date2str($in.0.DateOfLoad, "yyyy-MMM-d HH:mm:ss" );
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Load Time Dataset Writer" guiX="724" guiY="117" id="LOAD_TIME_DATASET_WRITER" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" guiName="Data Load Timestamp Generator" guiX="52" guiY="117" id="TODAY_2" recordsNumber="1" type="DATA_GENERATOR">
+<attr name="generate"><![CDATA[//#CTL2
+
+// Generates output record.
+function integer generate() {
+	$out.0.DateOfLoad = today();
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the generate. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if generate() throws an exception.
+// function integer generateOnError(string errorMessage, string stackTrace) {
+// }
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="DATE_TO_STRING_REFORMAT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge3" inPort="Port 0 (in)" metadata="Metadata2" outPort="Port 0 (out)" toNode="LOAD_TIME_DATASET_WRITER:0"/>
+<Edge debugMode="true" fromNode="TODAY_2:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (out)" toNode="DATE_TO_STRING_REFORMAT:0"/>
+</Phase>
+</Graph>
