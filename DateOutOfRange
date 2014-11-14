@@ -5,11 +5,11 @@
 function integer transform() {
 	
 //if input date != null and over max accepted GD date, then output date = max accepted date
-	if ($in.0.inputdate <> null )  if ($in.0.inputdate > 2010-12-30) $out.0.outputdate = 2049-12-30;
+	if ($in.0.inputdate <> null )  if ($in.0.inputdate > 2049-12-30) $out.0.outputdate = 2049-12-30;
 	        else $out.0.outputdate = $in.0.inputdate; 
 
 //if input date != null and under min accepted GD date, then output date = min accepted date	
-	if ($in.0.inputdate <> null )  if ($in.0.inputdate > 2010-12-30) $out.0.outputdate = 1900-01-01;
+	if ($in.0.inputdate <> null )  if ($in.0.inputdate < 1900-01-01) $out.0.outputdate = 1900-01-01;
 	        else $out.0.inputdate = $in.0.outputdate; 
 
 	return ALL;
