@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Graph author="michaelphillips" created="Mon Dec 01 08:57:30 CET 2014" guiVersion="3.4.4.P" id="1417606357877" licenseType="Commercial" modified="Wed Dec 03 17:55:42 CET 2014" modifiedBy="michaelphillips" name="pivot" revision="1.17" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata1" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="recordName" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\n" type="delimited">
+<Field eofAsDelimiter="false" label="Category" name="Category" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Subcategory" name="Subcategory" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Food_Type" name="Food_Type" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Units" name="Units" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="2001" name="_2001" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="2002" name="_2002" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="2003" name="_2003" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="2004" name="_2004" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="2005" name="_2005" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="2006" name="_2006" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="2007" name="_2007" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="2008" name="_2008" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="2009" name="_2009" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="2010" name="_2010" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="2011" name="_2011" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="2012" name="_2012" nullable="true" shift="0" size="0" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata2" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="recordName1" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\n" type="delimited">
+<Field name="Category" type="string"/>
+<Field name="Subcategory" type="string"/>
+<Field name="Food_Type" type="string"/>
+<Field name="Units" type="string"/>
+<Field name="Year" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata0" previewAttachment="${DATA_SOURCE_DIR}/Ullock_CSV.csv" previewAttachmentCharset="UTF-8">
+<Record fieldDelimiter="," label="Ullock_CSV.csv" name="Ullock_CSV_csv" previewAttachment="${DATA_SOURCE_DIR}/Ullock_CSV.csv" previewAttachmentCharset="UTF-8" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\r" skipSourceRows="1" type="delimited">
+<Field label="Category" name="Category" type="string"/>
+<Field label="Subcategory" name="Subcategory" type="string"/>
+<Field label="Food_Type" name="Food_Type" type="string"/>
+<Field label="Units" name="Units" type="string"/>
+<Field label="2001" name="_2001" type="string"/>
+<Field label="2002" name="_2002" type="string"/>
+<Field label="2003" name="_2003" type="string"/>
+<Field label="2004" name="_2004" type="string"/>
+<Field label="2005" name="_2005" type="string"/>
+<Field label="2006" name="_2006" type="string"/>
+<Field label="2007" name="_2007" type="string"/>
+<Field label="2008" name="_2008" type="string"/>
+<Field label="2009" name="_2009" type="string"/>
+<Field label="2010" name="_2010" type="string"/>
+<Field label="2011" name="_2011" type="string"/>
+<Field label="2012" name="_2012" type="string"/>
+<Field label="" name="_" type="string"/>
+<Field label="" name="__1" type="string"/>
+<Field label="" name="__2" type="string"/>
+<Field label="" name="__3" type="string"/>
+<Field label="" name="__4" type="string"/>
+<Field label="" name="__5" type="string"/>
+<Field label="" name="__6" type="string"/>
+<Field label="" name="__7" type="string"/>
+<Field label="" name="__8" type="string"/>
+<Field label="" name="__9" type="string"/>
+<Field label="" name="__10" type="string"/>
+<Field label="" name="__11" type="string"/>
+<Field label="" name="__12" type="string"/>
+<Field label="" name="__13" type="string"/>
+<Field label="" name="__14" type="string"/>
+<Field label="" name="__15" type="string"/>
+<Field label="" name="__16" type="string"/>
+<Field label="" name="__17" type="string"/>
+<Field label="" name="__18" type="string"/>
+<Field label="" name="__19" type="string"/>
+<Field label="" name="__20" type="string"/>
+<Field label="" name="__21" type="string"/>
+<Field label="" name="__22" type="string"/>
+<Field label="" name="__23" type="string"/>
+<Field label="" name="__24" type="string"/>
+<Field label="" name="__25" type="string"/>
+<Field label="" name="__26" type="string"/>
+<Field label="" name="__27" type="string"/>
+<Field label="" name="__28" type="string"/>
+<Field label="" name="__29" type="string"/>
+<Field label="" name="__30" type="string"/>
+<Field label="" name="__31" type="string"/>
+<Field label="" name="__32" type="string"/>
+<Field label="" name="__33" type="string"/>
+<Field label="" name="__34" type="string"/>
+<Field label="" name="__35" type="string"/>
+<Field label="" name="__36" type="string"/>
+<Field label="" name="__37" type="string"/>
+<Field label="" name="__38" type="string"/>
+<Field label="" name="__39" type="string"/>
+<Field label="" name="__40" type="string"/>
+<Field label="" name="__41" type="string"/>
+<Field label="" name="__42" type="string"/>
+<Field label="" name="__43" type="string"/>
+<Field label="" name="__44" type="string"/>
+<Field label="" name="__45" type="string"/>
+<Field label="" name="__46" type="string"/>
+<Field label="" name="__47" type="string"/>
+<Field label="" name="__48" type="string"/>
+<Field label="" name="__49" type="string"/>
+<Field label="" name="__50" type="string"/>
+<Field label="" name="__51" type="string"/>
+<Field label="" name="__52" type="string"/>
+<Field label="" name="__53" type="string"/>
+<Field label="" name="__54" type="string"/>
+<Field label="" name="__55" type="string"/>
+<Field label="" name="__56" type="string"/>
+<Field label="" name="__57" type="string"/>
+<Field label="" name="__58" type="string"/>
+<Field label="" name="__59" type="string"/>
+<Field label="" name="__60" type="string"/>
+<Field label="" name="__61" type="string"/>
+<Field label="" name="__62" type="string"/>
+<Field label="" name="__63" type="string"/>
+<Field label="" name="__64" type="string"/>
+<Field label="" name="__65" type="string"/>
+<Field label="" name="__66" type="string"/>
+<Field label="" name="__67" type="string"/>
+<Field label="" name="__68" type="string"/>
+<Field label="" name="__69" type="string"/>
+<Field label="" name="__70" type="string"/>
+<Field label="" name="__71" type="string"/>
+<Field label="" name="__72" type="string"/>
+<Field label="" name="__73" type="string"/>
+<Field label="" name="__74" type="string"/>
+<Field label="" name="__75" type="string"/>
+<Field label="" name="__76" type="string"/>
+<Field label="" name="__77" type="string"/>
+<Field label="" name="__78" type="string"/>
+<Field label="" name="__79" type="string"/>
+<Field label="" name="__80" type="string"/>
+<Field label="" name="__81" type="string"/>
+<Field label="" name="__82" type="string"/>
+<Field label="" name="__83" type="string"/>
+<Field label="" name="__84" type="string"/>
+<Field label="" name="__85" type="string"/>
+<Field label="" name="__86" type="string"/>
+<Field label="" name="__87" type="string"/>
+<Field label="" name="__88" type="string"/>
+<Field label="" name="__89" type="string"/>
+<Field label="" name="__90" type="string"/>
+<Field label="" name="__91" type="string"/>
+<Field label="" name="__92" type="string"/>
+<Field label="" name="__93" type="string"/>
+<Field label="" name="__94" type="string"/>
+<Field label="" name="__95" type="string"/>
+<Field label="" name="__96" type="string"/>
+<Field label="" name="__97" type="string"/>
+<Field label="" name="__98" type="string"/>
+<Field label="" name="__99" type="string"/>
+<Field label="" name="__100" type="string"/>
+<Field label="" name="__101" type="string"/>
+<Field label="" name="__102" type="string"/>
+<Field label="" name="__103" type="string"/>
+<Field label="" name="__104" type="string"/>
+<Field label="" name="__105" type="string"/>
+<Field label="" name="__106" type="string"/>
+<Field label="" name="__107" type="string"/>
+<Field label="" name="__108" type="string"/>
+<Field label="" name="__109" type="string"/>
+<Field label="" name="__110" type="string"/>
+<Field label="" name="__111" type="string"/>
+<Field label="" name="__112" type="string"/>
+<Field label="" name="__113" type="string"/>
+<Field label="" name="__114" type="string"/>
+<Field label="" name="__115" type="string"/>
+<Field label="" name="__116" type="string"/>
+<Field label="" name="__117" type="string"/>
+<Field label="" name="__118" type="string"/>
+<Field label="" name="__119" type="string"/>
+<Field label="" name="__120" type="string"/>
+<Field label="" name="__121" type="string"/>
+<Field label="" name="__122" type="string"/>
+<Field label="" name="__123" type="string"/>
+<Field label="" name="__124" type="string"/>
+<Field label="" name="__125" type="string"/>
+<Field label="" name="__126" type="string"/>
+<Field label="" name="__127" type="string"/>
+<Field label="" name="__128" type="string"/>
+<Field label="" name="__129" type="string"/>
+<Field label="" name="__130" type="string"/>
+<Field label="" name="__131" type="string"/>
+<Field label="" name="__132" type="string"/>
+<Field label="" name="__133" type="string"/>
+<Field label="" name="__134" type="string"/>
+<Field label="" name="__135" type="string"/>
+<Field label="" name="__136" type="string"/>
+<Field label="" name="__137" type="string"/>
+<Field label="" name="__138" type="string"/>
+<Field label="" name="__139" type="string"/>
+<Field label="" name="__140" type="string"/>
+<Field label="" name="__141" type="string"/>
+<Field label="" name="__142" type="string"/>
+<Field label="" name="__143" type="string"/>
+<Field label="" name="__144" type="string"/>
+<Field label="" name="__145" type="string"/>
+<Field label="" name="__146" type="string"/>
+<Field label="" name="__147" type="string"/>
+<Field label="" name="__148" type="string"/>
+<Field label="" name="__149" type="string"/>
+<Field label="" name="__150" type="string"/>
+<Field label="" name="__151" type="string"/>
+<Field label="" name="__152" type="string"/>
+<Field label="" name="__153" type="string"/>
+<Field label="" name="__154" type="string"/>
+<Field label="" name="__155" type="string"/>
+<Field label="" name="__156" type="string"/>
+<Field label="" name="__157" type="string"/>
+<Field label="" name="__158" type="string"/>
+<Field label="" name="__159" type="string"/>
+<Field label="" name="__160" type="string"/>
+<Field label="" name="__161" type="string"/>
+<Field label="" name="__162" type="string"/>
+<Field label="" name="__163" type="string"/>
+<Field label="" name="__164" type="string"/>
+<Field label="" name="__165" type="string"/>
+<Field label="" name="__166" type="string"/>
+<Field label="" name="__167" type="string"/>
+<Field label="" name="__168" type="string"/>
+<Field label="" name="__169" type="string"/>
+<Field label="" name="__170" type="string"/>
+<Field label="" name="__171" type="string"/>
+<Field label="" name="__172" type="string"/>
+<Field label="" name="__173" type="string"/>
+<Field label="" name="__174" type="string"/>
+<Field label="" name="__175" type="string"/>
+<Field label="" name="__176" type="string"/>
+<Field label="" name="__177" type="string"/>
+<Field label="" name="__178" type="string"/>
+<Field label="" name="__179" type="string"/>
+<Field label="" name="__180" type="string"/>
+<Field label="" name="__181" type="string"/>
+<Field label="" name="__182" type="string"/>
+<Field eofAsDelimiter="false" label="" name="__183" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node dataPolicy="strict" enabled="enabled" fileURL="${DATA_SOURCE_DIR}/Ullock_CSV.csv" guiName="CSV Reader" guiX="14" guiY="59" id="CSV_READER1" type="DATA_READER"/>
+<Node enabled="enabled" guiName="Normalizer" guiX="391" guiY="59" id="NORMALIZER1" type="NORMALIZER">
+<attr name="normalize"><![CDATA[//#CTL2
+// This transformation defines the way in which a single input record is normalized
+integer m_count = 4;
+// This transformation defines the way in which a single input record is normalized
+// into multiple output records.
+// This function is called for all input records.
+// It parses each single input record and returns the number of records
+// that should be created from such input record.
+function integer count() {
+	m_count=4;
+	return 12;
+}
+
+// This function creates new records for the output, based on single input record
+// that has been parsed by the count() function.
+// It is called count() times for each input record.
+// The idx argument specifies which output record is being created,
+// its values range is from 0 to count() - 1.
+function integer transform(integer idx) {
+	$out.0.Category = $in.0.Category;
+	$out.0.Subcategory = $in.0.Subcategory;
+	$out.0.Food_Type = $in.0.Food_Type;
+	$out.0.Units = $in.0.Units;
+	$out.0.Year = replace(getFieldName($in.0,m_count),'_','');
+	m_count++;
+	return OK;
+}
+
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if count() throws an exception.
+// function integer countOnError(string errorMessage, string stackTrace) {
+//}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace, integer idx) {
+// }
+
+// Called after transform(count-1) to return the resources that have been used to their initial state
+// so that next input record may be parsed.
+// function void clean() {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Reformat" guiX="210" guiY="59" id="REFORMAT" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.Category = $in.0.Category;
+	$out.0.Subcategory = $in.0.Subcategory;
+	$out.0.Food_Type = $in.0.Food_Type;
+	$out.0.Units = $in.0.Units;
+	$out.0._2001 = $in.0._2001;
+	$out.0._2002 = $in.0._2002;
+	$out.0._2003 = $in.0._2003;
+	$out.0._2004 = $in.0._2004;
+	$out.0._2005 = $in.0._2005;
+	$out.0._2006 = $in.0._2006;
+	$out.0._2007 = $in.0._2007;
+	$out.0._2008 = $in.0._2008;
+	$out.0._2009 = $in.0._2009;
+	$out.0._2010 = $in.0._2010;
+	$out.0._2011 = $in.0._2011;
+	$out.0._2012 = $in.0._2012;
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Reformat" guiX="567" guiY="59" id="REFORMAT4" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+
+function string fixnull (string ifnull) {
+	return isnull(ifnull)?'N/A':ifnull;
+}
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.Category = fixnull($in.0.Category);
+	$out.0.Subcategory = fixnull($in.0.Subcategory);
+	$out.0.Food_Type = fixnull($in.0.Food_Type);
+	$out.0.Units = fixnull($in.0.Units);
+	$out.0.Year = $in.0.Year;
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Trash" guiX="765" guiY="59" id="TRASH" type="TRASH"/>
+<Edge debugMode="true" fromNode="CSV_READER1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge10" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (output)" toNode="REFORMAT:0"/>
+<Edge debugMode="true" fromNode="NORMALIZER1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge12" inPort="Port 0 (in)" metadata="Metadata2" outPort="Port 0 (out)" toNode="REFORMAT4:0"/>
+<Edge debugMode="true" fromNode="REFORMAT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="NORMALIZER1:0"/>
+<Edge debugMode="true" fromNode="REFORMAT4:0" guiBendpoints="" guiRouter="Manhattan" id="Edge13" inPort="Port 0 (in)" metadata="Metadata2" outPort="Port 0 (out)" toNode="TRASH:0"/>
+</Phase>
+</Graph>
