@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Graph author="michaelphillips" created="Mon Dec 01 08:57:30 CET 2014" guiVersion="3.4.4.P" id="1418690190285" licenseCode="CLP1DGOODD71636137BY" licenseType="Commercial" modified="Mon Dec 01 08:57:30 CET 2014" modifiedBy="michaelphillips" name="test" revision="1.0" showComponentDetails="true">
+<Global>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" guiName="Reformat" guiX="311" guiY="92" id="REFORMAT" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+
+function integer transform() {
+	
+//if input date <> null and over max accepted GD date, then output date = max accepted date
+	if ($in.0.inputdate <> null )  if ($in.0.inputdate > 2049-12-30) $out.0.outputdate = 2049-12-30;
+	        else $out.0.outputdate = $in.0.inputdate; 
+
+//if input date <> null and under min accepted GD date, then output date = min accepted date	
+	if ($in.0.inputdate <> null )  if ($in.0.inputdate < 1900-01-01) $out.0.outputdate = 1900-01-01;
+	        else $out.0.inputdate = $in.0.outputdate; 
+
+	return ALL;
+}
+
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}]]></attr>
+</Node>
+</Phase>
+</Graph>
