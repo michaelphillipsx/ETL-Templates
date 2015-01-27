@@ -77,7 +77,7 @@ function integer transform() {
 </Phase>
 <Phase number="5">
 <Node enabled="enabled" fileURL="${DATA_SOURCE_DIR}/Footer.csv" guiName="CSV Reader" guiX="854" guiY="215" id="CSV_READER2" type="DATA_READER"/>
-<Node enabled="enabled" fileURL="${DATA_TMP_DIR}/ColorPalette.js" guiName="JSON Writer" guiX="1211" guiY="118" id="JSON_WRITER" type="DATA_WRITER"/>
+<Node enabled="enabled" fileURL="${DATA_TMP_DIR}/ColorPalette.json" guiName="JSON Writer" guiX="1211" guiY="118" id="JSON_WRITER" type="DATA_WRITER"/>
 <Node enabled="enabled" guiName="SimpleGather" guiX="1031" guiY="123" id="SIMPLE_GATHER" type="SIMPLE_GATHER"/>
 <Edge debugMode="true" fromNode="CSV_READER2:0" guiBendpoints="" guiRouter="Manhattan" id="Edge7" inPort="Port 2 (in)" metadata="Metadata1" outPort="Port 0 (output)" toNode="SIMPLE_GATHER:2"/>
 <Edge debugMode="true" fromNode="SIMPLE_GATHER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge4" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="JSON_WRITER:0"/>
