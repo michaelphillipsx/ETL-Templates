@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="michaelphillips" created="Wed Jan 07 16:10:44 PST 2015" guiVersion="3.4.4.P" id="1421103861174" licenseCode="CLP1DGOODD71636137BY" licenseType="Commercial" modified="Thu Jan 15 16:25:13 PST 2015" modifiedBy="michaelphillips" name="Color Builder" revision="1.15" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="michaelphillips" created="Wed Jan 07 16:10:44 PST 2015" guiVersion="3.4.4.P" id="1421103861174" licenseType="Commercial" modified="Mon Jan 26 16:45:27 PST 2015" modifiedBy="michaelphillips" name="Color Builder" revision="1.25" showComponentDetails="true">
 <Global>
 <Metadata id="Metadata2" previewAttachment="${DATA_SOURCE_DIR}/865.csv" previewAttachmentCharset="UTF-8">
 <Record fieldDelimiter="," label="865.csv" name="_865_csv" previewAttachment="${DATA_SOURCE_DIR}/865.csv" previewAttachmentCharset="UTF-8" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="0" type="delimited">
@@ -21,22 +21,22 @@
 </Metadata>
 <Metadata id="Metadata1" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="|" name="recordName1" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\n" type="delimited">
-<Field name="JSON" type="string"/>
+<Field eofAsDelimiter="true" name="JSON" type="string"/>
 </Record>
 </Metadata>
 <Property fileURL="workspace.prm" id="GraphParameter0"/>
-<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="279" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="12" title="Building a Color Palette" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="14" width="1341" x="107" y="18">
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="301" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="12" title="Building a Color Palette" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="14" width="1341" x="20" y="24">
 <attr name="text"><![CDATA[Input CSV with RGB values; Output JSON text for Style Settings PUT call.]]></attr>
 </Note>
 <Dictionary/>
 </Global>
 <Phase number="0">
-<Node enabled="enabled" fileURL="${DATA_SOURCE_DIR}/865.csv" guiName="CSV Reader" guiX="194" guiY="117" id="CSV_READER" type="DATA_READER" verbose="true"/>
-<Node dedupKey="Hex(a)" enabled="enabled" guiName="Dedup" guiX="583" guiY="117" id="DEDUP" type="DEDUP"/>
-<Node enabled="enabled" guiName="ExtSort" guiX="398" guiY="117" id="EXT_SORT" sortKey="Hex(a)" type="EXT_SORT"/>
-<Node enabled="enabled" guiName="ExtSort" guiX="782" guiY="117" id="EXT_SORT1" sortKey="Red(a)" type="EXT_SORT"/>
-<Node enabled="enabled" fileURL="${DATA_TMP_DIR}/ColorPalette.js" guiName="JSON Writer" guiX="1199" guiY="117" id="JSON_WRITER" type="DATA_WRITER"/>
-<Node enabled="enabled" guiName="Reformat" guiX="989" guiY="117" id="REFORMAT" type="REFORMAT">
+<Node enabled="enabled" fileURL="${DATA_SOURCE_DIR}/865.csv" guiName="CSV Reader" guiX="106" guiY="139" id="CSV_READER" type="DATA_READER" verbose="true"/>
+<Node enabled="enabled" fileURL="${DATA_SOURCE_DIR}/Header.csv" guiName="CSV Reader" guiX="854" guiY="41" id="CSV_READER1" type="DATA_READER"/>
+<Node dedupKey="Hex(a)" enabled="enabled" guiName="Dedup" guiX="494" guiY="139" id="DEDUP" type="DEDUP"/>
+<Node enabled="enabled" guiName="ExtSort" guiX="307" guiY="139" id="EXT_SORT" sortKey="Hex(a)" type="EXT_SORT"/>
+<Node enabled="enabled" guiName="ExtSort" guiX="689" guiY="139" id="EXT_SORT1" sortKey="Red(a);Green(a);Blue(a)" type="EXT_SORT"/>
+<Node enabled="enabled" guiName="Reformat" guiX="854" guiY="139" id="REFORMAT" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
@@ -69,9 +69,17 @@ function integer transform() {
 ]]></attr>
 </Node>
 <Edge debugMode="true" fromNode="CSV_READER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (in)" metadata="Metadata2" outPort="Port 0 (output)" toNode="EXT_SORT:0"/>
+<Edge debugMode="true" fromNode="CSV_READER1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge6" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (output)" toNode="SIMPLE_GATHER:0"/>
 <Edge debugMode="true" fromNode="DEDUP:0" guiBendpoints="" guiRouter="Manhattan" id="Edge3" inPort="Port 0 (in)" metadata="Metadata2" outPort="Port 0 (unique)" toNode="EXT_SORT1:0"/>
 <Edge debugMode="true" fromNode="EXT_SORT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge2" inPort="Port 0 (in)" metadata="Metadata2" outPort="Port 0 (out)" toNode="DEDUP:0"/>
 <Edge debugMode="true" fromNode="EXT_SORT1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge5" inPort="Port 0 (in)" metadata="Metadata2" outPort="Port 0 (out)" toNode="REFORMAT:0"/>
-<Edge debugMode="true" fromNode="REFORMAT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="JSON_WRITER:0"/>
+<Edge debugMode="true" fromNode="REFORMAT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 1 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="SIMPLE_GATHER:1"/>
+</Phase>
+<Phase number="5">
+<Node enabled="enabled" fileURL="${DATA_SOURCE_DIR}/Footer.csv" guiName="CSV Reader" guiX="854" guiY="215" id="CSV_READER2" type="DATA_READER"/>
+<Node enabled="enabled" fileURL="${DATA_TMP_DIR}/ColorPalette.js" guiName="JSON Writer" guiX="1211" guiY="118" id="JSON_WRITER" type="DATA_WRITER"/>
+<Node enabled="enabled" guiName="SimpleGather" guiX="1031" guiY="123" id="SIMPLE_GATHER" type="SIMPLE_GATHER"/>
+<Edge debugMode="true" fromNode="CSV_READER2:0" guiBendpoints="" guiRouter="Manhattan" id="Edge7" inPort="Port 2 (in)" metadata="Metadata1" outPort="Port 0 (output)" toNode="SIMPLE_GATHER:2"/>
+<Edge debugMode="true" fromNode="SIMPLE_GATHER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge4" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="JSON_WRITER:0"/>
 </Phase>
 </Graph>
