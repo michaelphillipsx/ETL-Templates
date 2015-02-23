@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="michaelphillips" created="Mon Feb 09 11:20:09 PST 2015" guiVersion="3.4.4.P" id="1423584420493" licenseCode="CLP1DGOODD71636137BY" licenseType="Commercial" modified="Tue Feb 10 08:25:07 PST 2015" modifiedBy="michaelphillips" name="nulldate.grf" revision="1.7" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata1" previewAttachment="${DATA_SOURCE_DIR}/nulldata.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="nulldata.csv" name="nulldata_csv" previewAttachment="${DATA_SOURCE_DIR}/nulldata.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="both" quotedStrings="false" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field label="RecordID" name="RecordID" type="string"/>
+<Field eofAsDelimiter="false" label=" Date" name="Date" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata2">
+<Record fieldDelimiter="|" name="recordName" recordDelimiter="\n" type="delimited">
+<Field eofAsDelimiter="false" label="RecordID" name="RecordID" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label=" Date" name="Date" nullable="true" shift="0" size="0" type="date"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata0" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="recordName1" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\n" type="delimited">
+<Field name="RecordID" type="string"/>
+<Field format="yyyy-MM-dd" name="Date" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" fileURL="${DATA_SOURCE_DIR}/nulldate.csv" guiName="CSV Reader" guiX="54" guiY="111" id="CSV_READER" type="DATA_READER"/>
+<Node enabled="enabled" guiName="Reformat" guiX="341" guiY="111" id="REFORMAT" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.RecordID = $in.0.RecordID;
+	
+	
+		if($in.0.Date == "NULL"){
+			$out.0.Date = null;
+				} else {
+					$out.0.Date = str2date($in.0.Date,"yyyy-MM-dd");
+					} 
+		
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Trash" guiX="658" guiY="111" id="TRASH" type="TRASH"/>
+<Edge debugMode="true" fromNode="CSV_READER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge2" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (output)" toNode="REFORMAT:0"/>
+<Edge debugMode="true" fromNode="REFORMAT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge3" inPort="Port 0 (in)" metadata="Metadata2" outPort="Port 0 (out)" toNode="TRASH:0"/>
+</Phase>
+</Graph>
