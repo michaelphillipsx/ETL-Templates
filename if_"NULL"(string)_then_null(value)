@@ -28,7 +28,7 @@
 
 // Transforms input record into output record.
 function integer transform() {
-	$out.0.RecordID = $in.0.RecordID;
+// See GitHub comments for CSV example
 	
 	
 		if($in.0.Date == "NULL"){
